@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  0001f234  00000000  00000000  0000929f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00005b6f  00000000  00000000  000284d3  2**0
+ 18 .debug_line   00005b6d  00000000  00000000  000284d3  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000bde67  00000000  00000000  0002e042  2**0
+ 19 .debug_str    000bde67  00000000  00000000  0002e040  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  000ebea9  2**0
+ 20 .comment      00000043  00000000  00000000  000ebea7  2**0
                   CONTENTS, READONLY
  21 .debug_frame  0000122c  00000000  00000000  000ebeec  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -380,24 +380,19 @@ int main(void)
 {
  80004f4:	b580      	push	{r7, lr}
  80004f6:	af00      	add	r7, sp, #0
+  /* USER CODE BEGIN 1 */
   /* USER CODE END 1 */
-
   /* MCU Configuration--------------------------------------------------------*/
-
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
  80004f8:	f000 f9da 	bl	80008b0 <HAL_Init>
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
-
   /* Configure the system clock */
   SystemClock_Config();
  80004fc:	f000 f83e 	bl	800057c <SystemClock_Config>
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
-
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
  8000500:	f000 f8d0 	bl	80006a4 <MX_GPIO_Init>
@@ -408,9 +403,9 @@ int main(void)
  8000508:	2100      	movs	r1, #0
  800050a:	4817      	ldr	r0, [pc, #92]	@ (8000568 <main+0x74>)
  800050c:	f000 fb6d 	bl	8000bea <HAL_DAC_Start>
+  while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
 	  // Increase DAC value
 	          dac_value += 500;
@@ -419,7 +414,6 @@ int main(void)
  8000514:	f503 73fa 	add.w	r3, r3, #500	@ 0x1f4
  8000518:	4a14      	ldr	r2, [pc, #80]	@ (800056c <main+0x78>)
  800051a:	6013      	str	r3, [r2, #0]
-
 	          if(dac_value > 4095)
  800051c:	4b13      	ldr	r3, [pc, #76]	@ (800056c <main+0x78>)
  800051e:	681b      	ldr	r3, [r3, #0]
@@ -431,7 +425,6 @@ int main(void)
  8000528:	2200      	movs	r2, #0
  800052a:	601a      	str	r2, [r3, #0]
 	          }
-
 	          // Write value to DAC
 	          HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, dac_value);
  800052c:	4b0f      	ldr	r3, [pc, #60]	@ (800056c <main+0x78>)

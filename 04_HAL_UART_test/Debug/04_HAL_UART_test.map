@@ -3031,17 +3031,17 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0001f7fa      0x1de ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
  .debug_macro   0x0001f9d8      0x1bb ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
 
-.debug_line     0x00000000     0x7639
- .debug_line    0x00000000      0x96b ./Core/Src/main.o
- .debug_line    0x0000096b      0x763 ./Core/Src/stm32f4xx_hal_msp.o
- .debug_line    0x000010ce      0x7c4 ./Core/Src/stm32f4xx_it.o
- .debug_line    0x00001892      0x78b ./Core/Src/system_stm32f4xx.o
- .debug_line    0x0000201d       0x7a ./Core/Startup/startup_stm32f407vgtx.o
- .debug_line    0x00002097      0xa07 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x00002a9e      0xcd7 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x00003775      0xb5f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_line    0x000042d4      0xe16 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_line    0x000050ea     0x254f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+.debug_line     0x00000000     0x7635
+ .debug_line    0x00000000      0x967 ./Core/Src/main.o
+ .debug_line    0x00000967      0x763 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_line    0x000010ca      0x7c4 ./Core/Src/stm32f4xx_it.o
+ .debug_line    0x0000188e      0x78b ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x00002019       0x7a ./Core/Startup/startup_stm32f407vgtx.o
+ .debug_line    0x00002093      0xa07 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x00002a9a      0xcd7 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x00003771      0xb5f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_line    0x000042d0      0xe16 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_line    0x000050e6     0x254f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
 
 .debug_str      0x00000000    0xc1f1f
  .debug_str     0x00000000    0xc1f1f ./Core/Src/main.o

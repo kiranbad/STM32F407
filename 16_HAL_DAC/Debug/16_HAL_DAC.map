@@ -3055,17 +3055,17 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0001ee82      0x1ca ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
  .debug_macro   0x0001f04c      0x1e8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
-.debug_line     0x00000000     0x5b6f
- .debug_line    0x00000000      0x815 ./Core/Src/main.o
- .debug_line    0x00000815      0x776 ./Core/Src/stm32f4xx_hal_msp.o
- .debug_line    0x00000f8b      0x7dd ./Core/Src/stm32f4xx_it.o
- .debug_line    0x00001768      0x7a4 ./Core/Src/system_stm32f4xx.o
- .debug_line    0x00001f0c       0x7a ./Core/Startup/startup_stm32f407vgtx.o
- .debug_line    0x00001f86      0xa20 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x000029a6      0xcf0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x00003696      0xb32 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac.o
- .debug_line    0x000041c8      0xb78 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_line    0x00004d40      0xe2f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+.debug_line     0x00000000     0x5b6d
+ .debug_line    0x00000000      0x813 ./Core/Src/main.o
+ .debug_line    0x00000813      0x776 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_line    0x00000f89      0x7dd ./Core/Src/stm32f4xx_it.o
+ .debug_line    0x00001766      0x7a4 ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x00001f0a       0x7a ./Core/Startup/startup_stm32f407vgtx.o
+ .debug_line    0x00001f84      0xa20 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x000029a4      0xcf0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x00003694      0xb32 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac.o
+ .debug_line    0x000041c6      0xb78 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_line    0x00004d3e      0xe2f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
 .debug_str      0x00000000    0xbde67
  .debug_str     0x00000000    0xbde67 ./Core/Src/main.o

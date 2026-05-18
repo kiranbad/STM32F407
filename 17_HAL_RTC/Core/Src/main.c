@@ -87,9 +87,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
-
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_RTC_Init();
@@ -98,36 +96,23 @@ int main(void)
   sTime.Hours = 10;
   sTime.Minutes = 30;
   sTime.Seconds = 0;
-
-  HAL_RTC_SetTime(&hrtc,
-                  &sTime,
-                  RTC_FORMAT_BIN);
+  HAL_RTC_SetTime(&hrtc,&sTime,RTC_FORMAT_BIN);
   sDate.Date = 1;
   sDate.Month = RTC_MONTH_JANUARY;
   sDate.Year = 26;
   sDate.WeekDay = RTC_WEEKDAY_MONDAY;
 
-  HAL_RTC_SetDate(&hrtc,
-                  &sDate,
-                  RTC_FORMAT_BIN);
+  HAL_RTC_SetDate(&hrtc,&sDate,RTC_FORMAT_BIN);
   /* USER CODE END 2 */
-
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
-	  HAL_RTC_GetTime(&hrtc,
-	                     &sTime,
-	                     RTC_FORMAT_BIN);
-
-	     HAL_RTC_GetDate(&hrtc,
-	                     &sDate,
-	                     RTC_FORMAT_BIN);
-
-	     HAL_Delay(1000);
+	  HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+	  HAL_RTC_GetDate(&hrtc,&sDate,RTC_FORMAT_BIN);
+	  HAL_Delay(1000);
 
   }
   /* USER CODE END 3 */

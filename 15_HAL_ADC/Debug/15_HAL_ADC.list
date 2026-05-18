@@ -39,15 +39,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  00020097  00000000  00000000  00008d2e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   000057a6  00000000  00000000  00028dc5  2**0
+ 18 .debug_line   000057a2  00000000  00000000  00028dc5  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000c8edd  00000000  00000000  0002e56b  2**0
+ 19 .debug_str    000c8edd  00000000  00000000  0002e567  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  000f7448  2**0
+ 20 .comment      00000043  00000000  00000000  000f7444  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00001184  00000000  00000000  000f748c  2**2
+ 21 .debug_frame  00001184  00000000  00000000  000f7488  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000046  00000000  00000000  000f8610  2**0
+ 22 .debug_line_str 00000046  00000000  00000000  000f860c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -380,52 +380,43 @@ int main(void)
 {
  80004f4:	b580      	push	{r7, lr}
  80004f6:	af00      	add	r7, sp, #0
+  /* USER CODE BEGIN 1 */
   /* USER CODE END 1 */
-
   /* MCU Configuration--------------------------------------------------------*/
-
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
  80004f8:	f000 f998 	bl	800082c <HAL_Init>
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
-
   /* Configure the system clock */
   SystemClock_Config();
  80004fc:	f000 f81e 	bl	800053c <SystemClock_Config>
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
-
   /* Initialize all configured peripherals */
   MX_ADC1_Init();
  8000500:	f000 f886 	bl	8000610 <MX_ADC1_Init>
+  /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
 	  HAL_ADC_Start(&hadc1);
  8000504:	480b      	ldr	r0, [pc, #44]	@ (8000534 <main+0x40>)
  8000506:	f000 fa6b 	bl	80009e0 <HAL_ADC_Start>
-
 	      HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
  800050a:	f04f 31ff 	mov.w	r1, #4294967295
  800050e:	4809      	ldr	r0, [pc, #36]	@ (8000534 <main+0x40>)
  8000510:	f000 fb6b 	bl	8000bea <HAL_ADC_PollForConversion>
-
 	      adc_value = HAL_ADC_GetValue(&hadc1);
  8000514:	4807      	ldr	r0, [pc, #28]	@ (8000534 <main+0x40>)
  8000516:	f000 fbf3 	bl	8000d00 <HAL_ADC_GetValue>
  800051a:	4603      	mov	r3, r0
  800051c:	4a06      	ldr	r2, [pc, #24]	@ (8000538 <main+0x44>)
  800051e:	6013      	str	r3, [r2, #0]
-
 	      HAL_ADC_Stop(&hadc1);
  8000520:	4804      	ldr	r0, [pc, #16]	@ (8000534 <main+0x40>)
  8000522:	f000 fb2f 	bl	8000b84 <HAL_ADC_Stop>
-
 	      HAL_Delay(500);
  8000526:	f44f 70fa 	mov.w	r0, #500	@ 0x1f4
  800052a:	f000 f9f1 	bl	8000910 <HAL_Delay>

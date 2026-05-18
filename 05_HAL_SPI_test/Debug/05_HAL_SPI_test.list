@@ -39,15 +39,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  0001f245  00000000  00000000  0000a29d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00006c27  00000000  00000000  000294e2  2**0
+ 18 .debug_line   00006c23  00000000  00000000  000294e2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000be369  00000000  00000000  00030109  2**0
+ 19 .debug_str    000be369  00000000  00000000  00030105  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  000ee472  2**0
+ 20 .comment      00000043  00000000  00000000  000ee46e  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00001718  00000000  00000000  000ee4b8  2**2
+ 21 .debug_frame  00001718  00000000  00000000  000ee4b4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 0000004b  00000000  00000000  000efbd0  2**0
+ 22 .debug_line_str 0000004b  00000000  00000000  000efbcc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -390,40 +390,34 @@ int main(void)
  8000504:	b580      	push	{r7, lr}
  8000506:	b082      	sub	sp, #8
  8000508:	af02      	add	r7, sp, #8
+  /* USER CODE BEGIN 1 */
   /* USER CODE END 1 */
-
   /* MCU Configuration--------------------------------------------------------*/
-
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
  800050a:	f000 f9bf 	bl	800088c <HAL_Init>
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
-
   /* Configure the system clock */
   SystemClock_Config();
  800050e:	f000 f821 	bl	8000554 <SystemClock_Config>
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
-
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
  8000512:	f000 f8bf 	bl	8000694 <MX_GPIO_Init>
   MX_SPI1_Init();
  8000516:	f000 f887 	bl	8000628 <MX_SPI1_Init>
+  /* USER CODE BEGIN WHILE */
+  while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
-
 	  memset(rx_data, 0, sizeof(rx_data));
  800051a:	2214      	movs	r2, #20
  800051c:	2100      	movs	r1, #0
  800051e:	480a      	ldr	r0, [pc, #40]	@ (8000548 <main+0x44>)
  8000520:	f001 fc3e 	bl	8001da0 <memset>
-
 	  HAL_SPI_TransmitReceive(&hspi1, tx_data, rx_data, strlen((char*)tx_data), 100);
  8000524:	4809      	ldr	r0, [pc, #36]	@ (800054c <main+0x48>)
  8000526:	f7ff fe4f 	bl	80001c8 <strlen>
@@ -435,7 +429,6 @@ int main(void)
  8000534:	4905      	ldr	r1, [pc, #20]	@ (800054c <main+0x48>)
  8000536:	4806      	ldr	r0, [pc, #24]	@ (8000550 <main+0x4c>)
  8000538:	f001 f9ad 	bl	8001896 <HAL_SPI_TransmitReceive>
-
 	  HAL_Delay(1000);
  800053c:	f44f 707a 	mov.w	r0, #1000	@ 0x3e8
  8000540:	f000 fa16 	bl	8000970 <HAL_Delay>

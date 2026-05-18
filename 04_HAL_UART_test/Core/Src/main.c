@@ -69,34 +69,22 @@ uint8_t tx_data[] = "Hello from STM32\r\n";
   uint8_t rx_data[50];
 int main(void)
 {
-
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
-
   /* MCU Configuration--------------------------------------------------------*/
-
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
-
   /* Configure the system clock */
   SystemClock_Config();
-
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
-
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
   /* USER CODE END 2 */
-
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -106,7 +94,6 @@ int main(void)
       for(int i = 0; i < strlen((char*)tx_data); i++)
       {
           HAL_UART_Transmit(&huart2, &tx_data[i], 1, 100);
-
           HAL_UART_Receive(&huart2, &rx_data[i], 1, 100);
       }
 

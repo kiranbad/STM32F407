@@ -2979,17 +2979,17 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0001ee9e      0x1de ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
  .debug_macro   0x0001f07c      0x1c9 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
 
-.debug_line     0x00000000     0x6c27
- .debug_line    0x00000000      0x80e ./Core/Src/main.o
- .debug_line    0x0000080e      0x762 ./Core/Src/stm32f4xx_hal_msp.o
- .debug_line    0x00000f70      0x7c3 ./Core/Src/stm32f4xx_it.o
- .debug_line    0x00001733      0x78a ./Core/Src/system_stm32f4xx.o
- .debug_line    0x00001ebd       0x7a ./Core/Startup/startup_stm32f407vgtx.o
- .debug_line    0x00001f37      0xa06 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x0000293d      0xcd6 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x00003613      0xb5e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_line    0x00004171      0xe15 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_line    0x00004f86     0x1ca1 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+.debug_line     0x00000000     0x6c23
+ .debug_line    0x00000000      0x80a ./Core/Src/main.o
+ .debug_line    0x0000080a      0x762 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_line    0x00000f6c      0x7c3 ./Core/Src/stm32f4xx_it.o
+ .debug_line    0x0000172f      0x78a ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x00001eb9       0x7a ./Core/Startup/startup_stm32f407vgtx.o
+ .debug_line    0x00001f33      0xa06 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x00002939      0xcd6 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x0000360f      0xb5e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_line    0x0000416d      0xe15 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_line    0x00004f82     0x1ca1 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
 
 .debug_str      0x00000000    0xbe369
  .debug_str     0x00000000    0xbe369 ./Core/Src/main.o

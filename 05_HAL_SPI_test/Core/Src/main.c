@@ -67,46 +67,30 @@ uint8_t tx_data[] = "Hello SPI";
 uint8_t rx_data[20];
 int main(void)
 {
-
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
-
   /* MCU Configuration--------------------------------------------------------*/
-
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
-
   /* Configure the system clock */
   SystemClock_Config();
-
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
-
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-
   /* USER CODE END 2 */
-
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
-
 	  memset(rx_data, 0, sizeof(rx_data));
-
 	  HAL_SPI_TransmitReceive(&hspi1, tx_data, rx_data, strlen((char*)tx_data), 100);
-
 	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */

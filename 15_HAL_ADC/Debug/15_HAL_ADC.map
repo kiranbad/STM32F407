@@ -3164,16 +3164,16 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0001fcc3      0x1d8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .debug_macro   0x0001fe9b      0x1fc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
-.debug_line     0x00000000     0x57a6
- .debug_line    0x00000000      0x834 ./Core/Src/main.o
- .debug_line    0x00000834      0x77d ./Core/Src/stm32f4xx_hal_msp.o
- .debug_line    0x00000fb1      0x7f3 ./Core/Src/stm32f4xx_it.o
- .debug_line    0x000017a4      0x7ba ./Core/Src/system_stm32f4xx.o
- .debug_line    0x00001f5e       0x7a ./Core/Startup/startup_stm32f407vgtx.o
- .debug_line    0x00001fd8      0xa36 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x00002a0e     0x124d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
- .debug_line    0x00003c5b      0xd06 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x00004961      0xe45 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+.debug_line     0x00000000     0x57a2
+ .debug_line    0x00000000      0x830 ./Core/Src/main.o
+ .debug_line    0x00000830      0x77d ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_line    0x00000fad      0x7f3 ./Core/Src/stm32f4xx_it.o
+ .debug_line    0x000017a0      0x7ba ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x00001f5a       0x7a ./Core/Startup/startup_stm32f407vgtx.o
+ .debug_line    0x00001fd4      0xa36 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x00002a0a     0x124d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
+ .debug_line    0x00003c57      0xd06 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x0000495d      0xe45 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
 .debug_str      0x00000000    0xc8edd
  .debug_str     0x00000000    0xc8edd ./Core/Src/main.o

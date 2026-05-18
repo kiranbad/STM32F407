@@ -39,15 +39,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  0001ee01  00000000  00000000  00007b54  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00004e46  00000000  00000000  00026955  2**0
+ 18 .debug_line   00004e44  00000000  00000000  00026955  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000bc494  00000000  00000000  0002b79b  2**0
+ 19 .debug_str    000bc494  00000000  00000000  0002b799  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  000e7c2f  2**0
+ 20 .comment      00000043  00000000  00000000  000e7c2d  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00000e84  00000000  00000000  000e7c74  2**2
+ 21 .debug_frame  00000e84  00000000  00000000  000e7c70  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 0000004f  00000000  00000000  000e8af8  2**0
+ 22 .debug_line_str 0000004f  00000000  00000000  000e8af4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -380,31 +380,26 @@ int main(void)
 {
  80004f4:	b580      	push	{r7, lr}
  80004f6:	af00      	add	r7, sp, #0
+  /* USER CODE BEGIN 1 */
   /* USER CODE END 1 */
-
   /* MCU Configuration--------------------------------------------------------*/
-
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
  80004f8:	f000 f964 	bl	80007c4 <HAL_Init>
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
-
   /* Configure the system clock */
   SystemClock_Config();
  80004fc:	f000 f81a 	bl	8000534 <SystemClock_Config>
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
-
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
  8000500:	f000 f882 	bl	8000608 <MX_GPIO_Init>
+  /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
 	  if ((HAL_GetTick() - previousTick) >= 2000)
  8000504:	f000 f9c4 	bl	8000890 <HAL_GetTick>
@@ -420,7 +415,6 @@ int main(void)
  800051a:	4603      	mov	r3, r0
  800051c:	4a03      	ldr	r2, [pc, #12]	@ (800052c <main+0x38>)
  800051e:	6013      	str	r3, [r2, #0]
-
 	              HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
  8000520:	f44f 5180 	mov.w	r1, #4096	@ 0x1000
  8000524:	4802      	ldr	r0, [pc, #8]	@ (8000530 <main+0x3c>)

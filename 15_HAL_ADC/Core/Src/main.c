@@ -65,48 +65,31 @@ static void MX_ADC1_Init(void);
   */
 int main(void)
 {
-
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
-
   /* MCU Configuration--------------------------------------------------------*/
-
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
-
   /* Configure the system clock */
   SystemClock_Config();
-
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
-
   /* Initialize all configured peripherals */
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-
   /* USER CODE END 2 */
-
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
 	  HAL_ADC_Start(&hadc1);
-
 	      HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-
 	      adc_value = HAL_ADC_GetValue(&hadc1);
-
 	      HAL_ADC_Stop(&hadc1);
-
 	      HAL_Delay(500);
   }
   /* USER CODE END 3 */
