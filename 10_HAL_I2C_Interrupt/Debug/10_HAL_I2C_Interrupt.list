@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  0001fe21  00000000  00000000  0000e99c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00009c41  00000000  00000000  0002e7bd  2**0
+ 18 .debug_line   00009c3f  00000000  00000000  0002e7bd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000c227a  00000000  00000000  000383fe  2**0
+ 19 .debug_str    000c227a  00000000  00000000  000383fc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  000fa678  2**0
+ 20 .comment      00000043  00000000  00000000  000fa676  2**0
                   CONTENTS, READONLY
  21 .debug_frame  00001e1c  00000000  00000000  000fa6bc  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -389,33 +389,28 @@ int main(void)
 {
  8000504:	b580      	push	{r7, lr}
  8000506:	af00      	add	r7, sp, #0
+  /* USER CODE BEGIN 1 */
   /* USER CODE END 1 */
-
   /* MCU Configuration--------------------------------------------------------*/
-
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
  8000508:	f000 f9e2 	bl	80008d0 <HAL_Init>
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
-
   /* Configure the system clock */
   SystemClock_Config();
  800050c:	f000 f818 	bl	8000540 <SystemClock_Config>
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
-
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
  8000510:	f000 f8ae 	bl	8000670 <MX_GPIO_Init>
   MX_I2C1_Init();
  8000514:	f000 f87e 	bl	8000614 <MX_I2C1_Init>
+  /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
 	  HAL_I2C_Master_Transmit_IT(&hi2c1, (0x08 << 1), tx_data, strlen((char*)tx_data));
  8000518:	4807      	ldr	r0, [pc, #28]	@ (8000538 <main+0x34>)
@@ -426,7 +421,6 @@ int main(void)
  8000524:	2110      	movs	r1, #16
  8000526:	4805      	ldr	r0, [pc, #20]	@ (800053c <main+0x38>)
  8000528:	f000 feba 	bl	80012a0 <HAL_I2C_Master_Transmit_IT>
-
 	  HAL_Delay(1000);
  800052c:	f44f 707a 	mov.w	r0, #1000	@ 0x3e8
  8000530:	f000 fa40 	bl	80009b4 <HAL_Delay>

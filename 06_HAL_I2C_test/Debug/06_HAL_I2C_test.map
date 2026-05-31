@@ -3160,17 +3160,17 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0001ef74      0x218 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
  .debug_macro   0x0001f18c      0x1ee ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
-.debug_line     0x00000000     0x8b19
- .debug_line    0x00000000      0x81d ./Core/Src/main.o
- .debug_line    0x0000081d      0x77d ./Core/Src/stm32f4xx_hal_msp.o
- .debug_line    0x00000f9a      0x7dd ./Core/Src/stm32f4xx_it.o
- .debug_line    0x00001777      0x7a4 ./Core/Src/system_stm32f4xx.o
- .debug_line    0x00001f1b       0x7a ./Core/Startup/startup_stm32f407vgtx.o
- .debug_line    0x00001f95      0xa20 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x000029b5      0xcf0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x000036a5      0xb78 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_line    0x0000421d     0x3acd ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
- .debug_line    0x00007cea      0xe2f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+.debug_line     0x00000000     0x8b15
+ .debug_line    0x00000000      0x819 ./Core/Src/main.o
+ .debug_line    0x00000819      0x77d ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_line    0x00000f96      0x7dd ./Core/Src/stm32f4xx_it.o
+ .debug_line    0x00001773      0x7a4 ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x00001f17       0x7a ./Core/Startup/startup_stm32f407vgtx.o
+ .debug_line    0x00001f91      0xa20 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x000029b1      0xcf0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x000036a1      0xb78 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_line    0x00004219     0x3acd ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
+ .debug_line    0x00007ce6      0xe2f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
 
 .debug_str      0x00000000    0xbed95
  .debug_str     0x00000000    0xbed95 ./Core/Src/main.o
