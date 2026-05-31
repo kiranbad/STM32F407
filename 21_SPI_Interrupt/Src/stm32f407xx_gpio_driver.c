@@ -1,9 +1,3 @@
-/*
- * stm32f407xx_gpio_driver.c
- *
- *  Created on: Apr 30, 2026
- *      Author: 91762
- */
 
 #include <stm32f407xx_gpio_driver.h>
 

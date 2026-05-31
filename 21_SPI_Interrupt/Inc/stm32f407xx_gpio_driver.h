@@ -1,11 +1,4 @@
-/*
- * stm32f407xx_gpio_driver.h
- *
- *  Created on: Apr 30, 2026
- *      Author: 91762
- */
-
-#ifndef STM32F407XX_GPIO_DRIVER_H_
+ #ifndef STM32F407XX_GPIO_DRIVER_H_
 #define STM32F407XX_GPIO_DRIVER_H_
 
 

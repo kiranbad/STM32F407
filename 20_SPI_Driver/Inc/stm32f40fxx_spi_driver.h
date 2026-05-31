@@ -1,10 +1,3 @@
-/*
- * stm32f40fxx_spi_driver.h
- *
- *  Created on: Apr 30, 2026
- *      Author: 91762
- */
-
 #ifndef INC_STM32F407XX_SPI_DRIVER_H_
 #define INC_STM32F407XX_SPI_DRIVER_H_
 #include "stm32f407xx.h"
