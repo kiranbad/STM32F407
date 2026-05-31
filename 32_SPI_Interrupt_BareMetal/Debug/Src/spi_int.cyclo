@@ -1,0 +1,6 @@
+../Src/spi_int.c:17:6:delay	2
+../Src/spi_int.c:22:6:SPI2_GPIOInits	1
+../Src/spi_int.c:57:6:SPI2_Init	1
+../Src/spi_int.c:71:5:main	2
+../Src/spi_int.c:104:6:SPI2_IRQHandler	1
+../Src/spi_int.c:110:6:SPI_ApplicationEventCallback	2

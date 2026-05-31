@@ -1,0 +1,5 @@
+../Src/stm32f407xx_timer_driver.c:12:6:TIM_PeriClockControl	6
+../Src/stm32f407xx_timer_driver.c:24:6:TIM_Init	1
+../Src/stm32f407xx_timer_driver.c:39:6:TIM_Start	1
+../Src/stm32f407xx_timer_driver.c:45:6:TIM_Stop	1
+../Src/stm32f407xx_timer_driver.c:51:6:TIM_DelayMs	3
