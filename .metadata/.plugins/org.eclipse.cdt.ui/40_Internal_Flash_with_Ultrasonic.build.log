@@ -1,0 +1,10 @@
+15:50:33 **** Incremental Build of configuration Debug for project 40_Internal_Flash_with_Ultrasonic ****
+make -j12 all 
+arm-none-eabi-size  40_Internal_Flash_with_Ultrasonic.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13036	     92	   2156	  15284	   3bb4	40_Internal_Flash_with_Ultrasonic.elf
+Finished building: default.size.stdout
+ 
+
+15:50:33 Build Finished. 0 errors, 0 warnings. (took 320ms)
+

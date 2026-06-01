@@ -1,0 +1,10 @@
+22:32:27 **** Build of configuration Debug for project SPI_INTRRUPT ****
+make -j12 all 
+arm-none-eabi-size  SPI_INTRRUPT.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3844	      4	   1604	   5452	   154c	SPI_INTRRUPT.elf
+Finished building: default.size.stdout
+ 
+
+22:32:27 Build Finished. 0 errors, 0 warnings. (took 215ms)
+

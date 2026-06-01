@@ -1,0 +1,10 @@
+22:32:26 **** Build of configuration Debug for project I2C Driver ****
+make -j12 all 
+arm-none-eabi-size  I2C\ Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3884	     32	   1608	   5524	   1594	I2C Driver.elf
+Finished building: default.size.stdout
+ 
+
+22:32:26 Build Finished. 0 errors, 0 warnings. (took 222ms)
+

@@ -1,0 +1,10 @@
+10:52:09 **** Incremental Build of configuration Debug for project FreeRTOS_Project_Flash ****
+make -j12 all 
+arm-none-eabi-size  FreeRTOS_Project_Flash.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27992	     96	  19960	  48048	   bbb0	FreeRTOS_Project_Flash.elf
+Finished building: default.size.stdout
+ 
+
+10:52:10 Build Finished. 0 errors, 0 warnings. (took 407ms)
+

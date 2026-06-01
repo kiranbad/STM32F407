@@ -1,0 +1,10 @@
+23:11:06 **** Build of configuration Debug for project 50_Idle_Task_Hook_FreeRTOS ****
+make -j12 all 
+arm-none-eabi-size  50_Idle_Task_Hook_FreeRTOS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16624	     96	  18376	  35096	   8918	50_Idle_Task_Hook_FreeRTOS.elf
+Finished building: default.size.stdout
+ 
+
+23:11:07 Build Finished. 0 errors, 0 warnings. (took 498ms)
+

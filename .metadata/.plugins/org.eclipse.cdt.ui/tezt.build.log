@@ -1,0 +1,10 @@
+14:34:50 **** Incremental Build of configuration Debug for project tezt ****
+make -j12 all 
+arm-none-eabi-size  tezt.elf 
+   text	   data	    bss	    dec	    hex	filename
+    656	      0	   1568	   2224	    8b0	tezt.elf
+Finished building: default.size.stdout
+ 
+
+14:34:50 Build Finished. 0 errors, 0 warnings. (took 333ms)
+

@@ -1,0 +1,10 @@
+20:12:51 **** Build of configuration Debug for project 17_HAL_RTC ****
+make -j12 all 
+arm-none-eabi-size  17_HAL_RTC.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9668	     12	   1700	  11380	   2c74	17_HAL_RTC.elf
+Finished building: default.size.stdout
+ 
+
+20:12:51 Build Finished. 0 errors, 0 warnings. (took 299ms)
+

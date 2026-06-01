@@ -1,0 +1,10 @@
+22:32:21 **** Build of configuration Debug for project 11_HAL_UART_TxtoRX_copyDMA ****
+make -j12 all 
+arm-none-eabi-size  11_HAL_UART_TxtoRX_copyDMA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14104	     24	   1856	  15984	   3e70	11_HAL_UART_TxtoRX_copyDMA.elf
+Finished building: default.size.stdout
+ 
+
+22:32:21 Build Finished. 0 errors, 0 warnings. (took 266ms)
+

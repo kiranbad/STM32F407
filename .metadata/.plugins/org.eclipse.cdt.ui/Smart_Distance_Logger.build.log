@@ -1,0 +1,10 @@
+10:50:37 **** Build of configuration Debug for project Smart_Distance_Logger ****
+make -j12 all 
+arm-none-eabi-size  Smart_Distance_Logger.elf 
+   text	   data	    bss	    dec	    hex	filename
+  44384	    472	  21184	  66040	  101f8	Smart_Distance_Logger.elf
+Finished building: default.size.stdout
+ 
+
+10:50:39 Build Finished. 0 errors, 0 warnings. (took 1s.620ms)
+

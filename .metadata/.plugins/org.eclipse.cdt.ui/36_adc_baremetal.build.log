@@ -1,0 +1,17 @@
+12:11:10 **** Incremental Build of configuration Debug for project 36_adc_baremetal ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc -o "36_adc_baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\005_STM32\36_adc_baremetal\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="36_adc_baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 36_adc_baremetal.elf
+ 
+arm-none-eabi-size  36_adc_baremetal.elf 
+arm-none-eabi-objdump -h -S 36_adc_baremetal.elf  > "36_adc_baremetal.list"
+   text	   data	    bss	    dec	    hex	filename
+   2728	      0	   1568	   4296	   10c8	36_adc_baremetal.elf
+Finished building: default.size.stdout
+ 
+Finished building: 36_adc_baremetal.list
+ 
+
+12:11:10 Build Finished. 0 errors, 0 warnings. (took 785ms)
+

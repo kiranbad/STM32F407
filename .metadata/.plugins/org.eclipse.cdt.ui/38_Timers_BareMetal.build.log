@@ -1,0 +1,10 @@
+14:20:17 **** Incremental Build of configuration Debug for project 38_Timers_BareMetal ****
+make -j12 all 
+arm-none-eabi-size  38_Timers_BareMetal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2248	      0	   1568	   3816	    ee8	38_Timers_BareMetal.elf
+Finished building: default.size.stdout
+ 
+
+14:20:17 Build Finished. 0 errors, 0 warnings. (took 305ms)
+

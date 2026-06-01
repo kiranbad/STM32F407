@@ -1,0 +1,10 @@
+22:49:18 **** Build of configuration Debug for project 44_Simple_Tasks_Creation_FreeRTOS ****
+make -j12 all 
+arm-none-eabi-size  44_Simple_Tasks_Creation_FreeRTOS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16644	     16	   9080	  25740	   648c	44_Simple_Tasks_Creation_FreeRTOS.elf
+Finished building: default.size.stdout
+ 
+
+22:49:19 Build Finished. 0 errors, 0 warnings. (took 1s.7ms)
+

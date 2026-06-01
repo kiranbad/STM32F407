@@ -1,0 +1,10 @@
+15:20:15 **** Incremental Build of configuration Debug for project 24_UART_Driver ****
+make -j12 all 
+arm-none-eabi-size  24_UART_Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3948	     32	   1616	   5596	   15dc	24_UART_Driver.elf
+Finished building: default.size.stdout
+ 
+
+15:20:16 Build Finished. 0 errors, 0 warnings. (took 332ms)
+

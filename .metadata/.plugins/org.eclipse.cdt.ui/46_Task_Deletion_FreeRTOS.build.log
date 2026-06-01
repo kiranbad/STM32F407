@@ -1,0 +1,10 @@
+22:54:48 **** Build of configuration Debug for project 46_Task_Deletion_FreeRTOS ****
+make -j12 all 
+arm-none-eabi-size  46_Task_Deletion_FreeRTOS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16668	     96	  18376	  35140	   8944	46_Task_Deletion_FreeRTOS.elf
+Finished building: default.size.stdout
+ 
+
+22:54:48 Build Finished. 0 errors, 0 warnings. (took 541ms)
+

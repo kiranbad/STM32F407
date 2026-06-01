@@ -1,0 +1,9 @@
+rx_data
+previousTick
+adc_value
+dac_value
+sTime
+sDate
+rx_buffer
+write_flag
+distance

@@ -1,0 +1,10 @@
+15:20:07 **** Incremental Build of configuration Debug for project 07_HAL_GPIO_Interrupt ****
+make -j12 all 
+arm-none-eabi-size  07_HAL_GPIO_Interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6216	     12	   1572	   7800	   1e78	07_HAL_GPIO_Interrupt.elf
+Finished building: default.size.stdout
+ 
+
+15:20:07 Build Finished. 0 errors, 0 warnings. (took 342ms)
+

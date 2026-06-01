@@ -1,0 +1,10 @@
+22:59:54 **** Build of configuration Debug for project 47_Task_Delay_FreeRTOS ****
+make -j12 all 
+arm-none-eabi-size  47_Task_Delay_FreeRTOS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16592	     96	  18376	  35064	   88f8	47_Task_Delay_FreeRTOS.elf
+Finished building: default.size.stdout
+ 
+
+22:59:55 Build Finished. 0 errors, 0 warnings. (took 528ms)
+

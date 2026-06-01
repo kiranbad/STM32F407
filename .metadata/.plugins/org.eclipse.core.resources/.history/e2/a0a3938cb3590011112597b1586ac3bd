@@ -1,0 +1,146 @@
+#include "w25qxx.h"
+
+/* ---------------- LOW LEVEL ---------------- */
+
+/* ---------------- INITIALIZATION ---------------- */
+
+
+static void CS_LOW()
+{
+    HAL_GPIO_WritePin(W25Q_CS_PORT, W25Q_CS_PIN, GPIO_PIN_RESET);
+}
+
+static void CS_HIGH()
+{
+    HAL_GPIO_WritePin(W25Q_CS_PORT, W25Q_CS_PIN, GPIO_PIN_SET);
+}
+
+static void SPI_Transmit(uint8_t *data, uint16_t size)
+{
+    HAL_SPI_Transmit(&hspi1, data, size, HAL_MAX_DELAY);
+}
+
+static void SPI_Receive(uint8_t *data, uint16_t size)
+{
+    HAL_SPI_Receive(&hspi1, data, size, HAL_MAX_DELAY);
+}
+
+/* ---------------- BASIC ---------------- */
+
+void W25Q_WriteEnable()
+{
+    uint8_t cmd = W25Q_WRITE_ENABLE;
+
+    CS_LOW();
+    SPI_Transmit(&cmd, 1);
+    CS_HIGH();
+}
+
+uint32_t W25Q_ReadID()
+{
+    uint8_t cmd = W25Q_DEVICE_ID;
+    uint8_t id[3];
+
+    CS_LOW();
+    SPI_Transmit(&cmd, 1);
+    SPI_Receive(id, 3);
+    CS_HIGH();
+
+    return (id[0] << 16) | (id[1] << 8) | id[2];
+}
+
+uint8_t W25Q_ReadStatus()
+{
+    uint8_t cmd = W25Q_READ_STATUS1;
+    uint8_t status;
+
+    CS_LOW();
+    SPI_Transmit(&cmd, 1);
+    SPI_Receive(&status, 1);
+    CS_HIGH();
+
+    return status;
+}
+
+void W25Q_WaitBusy()
+{
+    while (W25Q_ReadStatus() & 0x01);
+}
+
+/* ---------------- ERASE ---------------- */
+
+void W25Q_SectorErase(uint32_t addr)
+{
+    uint8_t cmd[4];
+
+    W25Q_WriteEnable();
+
+    cmd[0] = W25Q_SECTOR_ERASE;
+    cmd[1] = (addr >> 16) & 0xFF;
+    cmd[2] = (addr >> 8) & 0xFF;
+    cmd[3] = addr & 0xFF;
+
+    CS_LOW();
+    SPI_Transmit(cmd, 4);
+    CS_HIGH();
+
+    W25Q_WaitBusy();
+}
+
+/* ---------------- WRITE PAGE ---------------- */
+
+void W25Q_PageWrite(uint32_t addr, uint8_t *data, uint16_t size)
+{
+    uint8_t cmd[4];
+
+    W25Q_WriteEnable();
+
+    cmd[0] = W25Q_PAGE_PROGRAM;
+    cmd[1] = (addr >> 16) & 0xFF;
+    cmd[2] = (addr >> 8) & 0xFF;
+    cmd[3] = addr & 0xFF;
+
+    CS_LOW();
+    SPI_Transmit(cmd, 4);
+    SPI_Transmit(data, size);
+    CS_HIGH();
+
+    W25Q_WaitBusy();
+}
+
+/* ---------------- READ ---------------- */
+
+void W25Q_Read(uint32_t addr, uint8_t *buffer, uint16_t size)
+{
+    uint8_t cmd[4];
+
+    cmd[0] = W25Q_READ_DATA;
+    cmd[1] = (addr >> 16) & 0xFF;
+    cmd[2] = (addr >> 8) & 0xFF;
+    cmd[3] = addr & 0xFF;
+
+    CS_LOW();
+    SPI_Transmit(cmd, 4);
+    SPI_Receive(buffer, size);
+    CS_HIGH();
+}
+
+/* ---------------- STRUCT SUPPORT ---------------- */
+
+void W25Q_WriteStruct(uint32_t addr, void *data, uint16_t size)
+{
+    W25Q_PageWrite(addr, (uint8_t*)data, size);
+}
+
+void W25Q_ReadStruct(uint32_t addr, void *data, uint16_t size)
+{
+    W25Q_Read(addr, (uint8_t*)data, size);
+}
+void W25Q_Init(void)
+{
+    // Ensure the flash chip Chip Select pin starts unselected (HIGH)
+    CS_HIGH();
+
+    // Read the device ID to wake up or verify the chip is communicating over SPI
+    W25Q_ReadID();
+}

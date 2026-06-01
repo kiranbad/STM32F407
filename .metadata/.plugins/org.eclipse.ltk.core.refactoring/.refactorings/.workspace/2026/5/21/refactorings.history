@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;RTOS_LED_BUTTON_TASK&apos; to &apos;48_Task_NotificatonValue_FreeRTOS&apos;" description="Rename resource &apos;RTOS_LED_BUTTON_TASK&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/RTOS_LED_BUTTON_TASK" name="48_Task_NotificatonValue_FreeRTOS" stamp="1779342717213" updateReferences="true"/>
+</session>

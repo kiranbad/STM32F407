@@ -1,0 +1,10 @@
+18:15:57 **** Incremental Build of configuration Debug for project Firstcode ****
+make -j12 all 
+arm-none-eabi-size  Firstcode.elf 
+   text	   data	    bss	    dec	    hex	filename
+    668	      0	   1568	   2236	    8bc	Firstcode.elf
+Finished building: default.size.stdout
+ 
+
+18:15:58 Build Finished. 0 errors, 0 warnings. (took 346ms)
+

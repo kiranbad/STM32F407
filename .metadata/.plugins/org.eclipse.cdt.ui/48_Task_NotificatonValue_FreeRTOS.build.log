@@ -1,0 +1,10 @@
+23:03:27 **** Build of configuration Debug for project 48_Task_NotificatonValue_FreeRTOS ****
+make -j12 all 
+arm-none-eabi-size  48_Task_NotificatonValue_FreeRTOS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17224	     96	  18376	  35696	   8b70	48_Task_NotificatonValue_FreeRTOS.elf
+Finished building: default.size.stdout
+ 
+
+23:03:28 Build Finished. 0 errors, 0 warnings. (took 1s.465ms)
+

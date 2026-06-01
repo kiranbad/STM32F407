@@ -1,0 +1,10 @@
+15:20:09 **** Incremental Build of configuration Debug for project 10_HAL_I2C_Interrupt ****
+make -j12 all 
+arm-none-eabi-size  10_HAL_I2C_Interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14176	     24	   1656	  15856	   3df0	10_HAL_I2C_Interrupt.elf
+Finished building: default.size.stdout
+ 
+
+15:20:09 Build Finished. 0 errors, 0 warnings. (took 347ms)
+

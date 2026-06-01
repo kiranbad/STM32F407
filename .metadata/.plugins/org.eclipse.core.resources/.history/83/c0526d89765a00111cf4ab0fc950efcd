@@ -1,0 +1,121 @@
+/* USER CODE BEGIN Includes */
+#include <stdio.h>
+#include <string.h>
+/* USER CODE END Includes */
+
+/* USER CODE BEGIN PV */
+
+#define TRIG_PIN    GPIO_PIN_9
+#define ECHO_PIN    GPIO_PIN_10
+#define TRIG_PORT   GPIOB
+#define ECHO_PORT   GPIOB
+
+char msg[100];
+uint32_t duration;
+uint32_t distance;
+
+/* USER CODE END PV */
+
+/* USER CODE BEGIN PFP */
+
+void delay_us(uint16_t us);
+uint32_t HCSR04_Read(void);
+
+/* USER CODE END PFP */
+
+/* USER CODE BEGIN 0 */
+
+void delay_us(uint16_t us)
+{
+    __HAL_TIM_SET_COUNTER(&htim3, 0);
+
+    while(__HAL_TIM_GET_COUNTER(&htim3) < us);
+}
+
+uint32_t HCSR04_Read(void)
+{
+    uint32_t timeout = 30000;
+
+    // TRIG LOW
+    HAL_GPIO_WritePin(TRIG_PORT,
+                      TRIG_PIN,
+                      GPIO_PIN_RESET);
+
+    delay_us(2);
+
+    // TRIG HIGH for 10us
+    HAL_GPIO_WritePin(TRIG_PORT,
+                      TRIG_PIN,
+                      GPIO_PIN_SET);
+
+    delay_us(10);
+
+    HAL_GPIO_WritePin(TRIG_PORT,
+                      TRIG_PIN,
+                      GPIO_PIN_RESET);
+
+    // Wait for ECHO HIGH
+    while(HAL_GPIO_ReadPin(ECHO_PORT,
+                           ECHO_PIN) == GPIO_PIN_RESET)
+    {
+        if(--timeout == 0)
+            return 0;
+    }
+
+    // Start timer
+    __HAL_TIM_SET_COUNTER(&htim3, 0);
+
+    timeout = 30000;
+
+    // Wait for ECHO LOW
+    while(HAL_GPIO_ReadPin(ECHO_PORT,
+                           ECHO_PIN) == GPIO_PIN_SET)
+    {
+        if(--timeout == 0)
+            break;
+    }
+
+    // Read counter value
+    duration = __HAL_TIM_GET_COUNTER(&htim3);
+
+    // Convert to cm
+    distance = duration / 58;
+
+    return distance;
+}
+
+/* USER CODE END 0 */
+
+int main(void)
+{
+  HAL_Init();
+
+  SystemClock_Config();
+
+  MX_GPIO_Init();
+  MX_TIM3_Init();
+  MX_USART2_UART_Init();
+
+  /* USER CODE BEGIN 2 */
+
+  // Start TIM3
+  HAL_TIM_Base_Start(&htim3);
+
+  /* USER CODE END 2 */
+
+  while (1)
+  {
+    distance = HCSR04_Read();
+
+    sprintf(msg,
+            "Distance = %lu cm\r\n",
+            distance);
+
+    HAL_UART_Transmit(&huart2,
+                      (uint8_t*)msg,
+                      strlen(msg),
+                      HAL_MAX_DELAY);
+
+    HAL_Delay(500);
+  }
+}
