@@ -1,3 +1,0 @@
-../drivers/src/003button_interrupt.c:16:6:delay	16	static
-../drivers/src/003button_interrupt.c:23:5:main	32	static
-../drivers/src/003button_interrupt.c:72:6:EXTI0_IRQHandler	8	static
